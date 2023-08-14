@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Design</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <section>
+            <div class="left">
+                <img class="hish imgs" src="./images/bg-main-desktop.png" alt="bg-main-desktop">
+                <img class="sish imgs" src="./images/bg-main-mobile.png" alt="bg-main-mobile">
+            <div class="cards">
+                <div class="fes">
+                    <img src="./images/bg-card-front.png" alt="bg-card-front">
+                    <img src="./images/card-logo.svg" alt="card-logo">
+                    <p class="finnum">0000 0000 0000 0000</p>
+                    <p class="finnam">UKEME BENJAMIN</p>
+                    <p> <span class="finyr">00</span>/<span class="finmth reset">00</span> </p>
+                </div>                
+                <div class="sec">
+                    <img src="./images/bg-card-back.png" alt="bg-card-back">
+                    <P class="ficvc">000</P>
+                </div>
+            </div>
+            </div>
+            <div class="right">
+                <div class="details">
+                    <label>CARDHOLDER NAME</label>
+                    <input class="name" type="text" placeholder="e.g. Benjamin Ukeme">
+                    <p class="rednamer hide">Name Cannot be empty</p>
+                    <label for="Card">CARD NUMBER</label>
+                    <input class="crdnum" type="text" maxlength="19" placeholder="e.g. 1234 56789 0000" oninput="formatCreditCard(this)">
+                    <P class="redernum hide">Wrong format numbers only</P>
+                    <div class="re">
+                        <div class="le">
+                            <label>EXP. DATE [MM/YY]</label>
+                            <div class="de">
+                            <input class="blk" type="number" placeholder="MM" oninput="this.value = this.value.replace(/[^0-9]/g,'').substring(0,2)">
+                            <input class="yr" type="number" placeholder="YY" oninput="this.value = this.value.replace(/[^0-9]/g,'').substring(0,2)">
+                        </div>
+                        <p class="rederp hide">Cant be blank</p>
+                        <p class="rederp2 hide">Cant be blank</p>
+                    </div>
+                        <div class="ri">
+                            <label for="cvc">CVC</label>
+                            <input class="dcvc" type="number" oninput="this.value = this.value.replace(/[^0-9]/g,'').substring(0,3)" placeholder="e.g. 123">
+                            <p class="redercvc hide">Cant be blank</p>
+                        </div>
+                    </div>
+                    <button class="confirmer">Confrm</button>
+            </div>
+            <div class="popup hide">
+                <div class="con">
+                    <img src="./images/icon-complete.svg" alt="icon-complete">
+                    <h1>THANK YOU!</h1>
+                    <P>We've added your card details</P>
+                    <button class="reseter">Continue</button>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+    <script src="script1.js"> </script>
+</body>
+</html>
